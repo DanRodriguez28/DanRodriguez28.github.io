@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* NAVIGATION */
+
+.nav {  
+    background-color: black;
+    height: 60px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    opacity: 90%;
+    z-index: 2;
+    align-items: center;
+}
+
+.nav__logo {
+    margin-left: 50px;
+}
+
+.nav__logo a {
+    color: white;
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.nav__logo a:hover {
+    color: rgb(184, 184, 184);
+}
+
+.nav__logo a::before { 
+    content: "<";
+    margin-right: 6px;
+    cursor: auto;
+    color: rgb(45, 110, 240)
+}
+
+.nav__logo a::after {
+    content: "/>";
+    margin-left: 6px;
+    cursor: auto;
+    color: rgb(45, 110, 240)
+}
+
+.nav__list {
+    display: flex;
+    position: relative;
+    align-self: center;
+    margin-left: auto;
+    margin-right: 50px;
+}
+
+.nav__list li {
+    padding: 5px;
+}
+
+.nav__list li a {
+    color: rgb(130, 130, 130);
+    padding: 0px 5px;
+    transition: all 0.3s;
+}
+
+.nav__list li a:hover {
+    color: rgb(45, 110, 240)
+}
+
+.nav__list li a.active {
+    color: rgb(350, 350, 350);
+}
+
+.nav .show__menu {
+    display: none;
+    margin-right: 30px;
+    margin-left: auto;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+.nav .show__menu i {
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+/* HOME */
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #000, #1354bc 280%);
+    z-index: -1;
+}
+
+.home__background {
+    background-image: url("Images/Background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 20%;
+}
+
+.home__img {
+    width: 200px;
+    border-radius: 100%;
+    z-index: 1;
+    margin: 50px;
+}
+
+.home__text {
+color: white;
+z-index: 1;
+margin: 50px;
+}
+
+.home__text p {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.home__text h1 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: rgb(45, 110, 240);
+    font-weight: bolder;
+}
+
+/* ABOUT */
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    padding: 0px 50px;
+    padding-top: 100px;
+}
+
+.about__description h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.about__description h3 {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin: 35px 0px;
+}
+
+.about__description p {
+    margin: 10px 0px;
+    line-height: 24px;
+}
+
+.about__skills {
+    margin-top: 70px;
+}
+
+.about__skills h3 {
+    font-size: 1.8rem;
+    font-weight: bolder;
+    margin-bottom: 30px;
+}
+
+.about__skills-icons {
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.about__skills i {
+    font-size: 3.5rem;
+    margin-top: 30px;
+}
+
+.about__skills-icons .html {
+    color: #F4470B;
+}
+
+.about__skills-icons .css {
+    color: #009bcf;
+}
+
+.about__skills-icons .js {
+    color: #EFD81D;
+}
+
+.about__skills-icons .js i {
+    margin-left: 12px;
+}
+
+.about__skills-icons .git {
+    color: #F34F29;
+}
+
+.skill-name {
+    color: #000;
+    text-align: center;
+    margin: 5px 0px;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 0px 50px;
+    padding-top: 90px;
+}
+
+.services h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.services h3 {
+    font-size: 1.2rem;
+    margin: 35px 0px;
+}
+
+.services__offer {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px;
+    text-align: center;
+}
+
+.services__offer i {
+    font-size: 2.5rem;
+}
+
+.services__offer i:hover {
+    color: #000;
+}
+
+.services__name {
+    margin: 10px 0px;
+    color: #000;
+}
+
+.services__name h4 {
+    margin: 20px 0px;
+}
+
+.services__name p {
+    font-weight: 200;
+}
+
+.fa-pen-ruler {
+    color: #E34C26;
+}
+
+.fa-code {
+    color: #008744;
+}
+
+.fa-thumbs-up {
+    color: #D62D20;
+}
+
+.fa-gauge-high {
+    color: #FFA700;
+}
+
+.fa-crosshairs {
+    color: #2D6EF0;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+    padding: 0px 50px;
+    padding-top: 100px;
+}
+
+.portfolio h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.portfolio h3 {
+    font-size: 1.2rem;
+    margin: 35px 0px;
+}
+
+.portfolio__works {
+    display: grid;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.portfolio .cards {
+    background: linear-gradient(180deg, #000, #0f4499);
+    width: 350px;
+    height: 165px;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    box-shadow: -2px 2px 20px #000;
+}
+
+.portfolio .cards .background {
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/NeoGiverse.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.portfolio .cards .content {
+    background-color: #000;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.portfolio .cards .content:hover {
+    opacity: 1;
+}
+
+.portfolio .cards .link {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.portfolio .cards h4 {
+    margin: 10px;
+}
+
+.portfolio .cards .link li {
+    list-style: none;
+    margin: 0px 15px;
+    padding: 4px 10px;
+    background:#0b3271;
+}
+
+.portfolio .cards .link li:hover {
+    border: 1px solid white;
+}
+
+.portfolio .cards .link li a {
+    color: #fff;
+}
+
+/* CONTACT */
+
+.contact {
+    padding: 0px 50px;
+    padding-top: 100px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.contact h3 {
+    font-size: 1.2rem;
+    margin: 35px 0px;
+}
+
+.contact__me {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.contact__me i {
+    font-size: 3.5rem;
+    margin-top: 30px;
+}
+
+.contact__me .linkedin {
+    color: #0E76A8;
+}
+
+.contact__me .linkedin:hover {
+    color: #000;
+}
+
+.contact__me .linkedin i {
+    margin-left: 5px;
+}
+
+.contact__me-text {
+    color: #000;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    padding: 30px 0px;
+}
+
+footer p {
+    font-size: 0.85rem;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .nav__logo {
+        margin: auto;
+    }
+
+    .nav .show__menu {
+        display: block;
+    }
+    
+    .nav ul {
+        display: block;
+        position: fixed;
+        top: 0;
+        background: linear-gradient(180deg, #000, #1354bc 280%);
+        height: 100%;
+        width: 250px;
+        opacity: 100%;
+        padding-top: 40px;
+        padding-left: 20px;
+        transform: translateX(-500px);
+    }
+
+    .nav ul.show {
+        transform: translateX(0px);
+    }
+
+    .nav__list li {
+        margin: 5px 0px;
+    }
+
+    .home {
+        flex-direction: column;
+
+    }
+
+    .home__img {
+        margin: 0px;
+        margin: 50px;
+    }
+    
+    .home__text {
+        margin: 0px;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services__offer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+        
+        .home__text p {
+            font-size: 1.8rem;
+        }
+        
+        .home__text h1 {
+            font-size: 2.5rem;
+        }
+
+        .about__skills-icons {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .services__offer {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+}
